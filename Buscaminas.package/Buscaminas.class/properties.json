@@ -1,0 +1,24 @@
+{
+	"commentStamp" : "",
+	"super" : "Morph",
+	"category" : "Buscaminas",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"puntos",
+		"vidas"
+	],
+	"instvars" : [
+		"opcion",
+		"mapping",
+		"cells",
+		"bombs",
+		"cellsPerSide",
+		"gameState",
+		"finalScore",
+		"vidasMapping",
+		"pos"
+	],
+	"name" : "Buscaminas",
+	"type" : "normal"
+}

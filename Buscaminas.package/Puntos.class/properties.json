@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Buscaminas",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"puntaje",
+		"sumar"
+	],
+	"name" : "Puntos",
+	"type" : "normal"
+}

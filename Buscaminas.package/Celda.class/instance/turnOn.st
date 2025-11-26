@@ -1,0 +1,3 @@
+switching
+turnOn
+	isOn := true.
