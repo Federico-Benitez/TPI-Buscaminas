@@ -17,7 +17,12 @@
 		"gameState",
 		"finalScore",
 		"vidasMapping",
-		"pos"
+		"pos",
+		"puntajePantalla",
+		"vidaPantalla",
+		"contadorBanderas",
+		"bombasTotales",
+		"banderasPantalla"
 	],
 	"name" : "Buscaminas",
 	"type" : "normal"
