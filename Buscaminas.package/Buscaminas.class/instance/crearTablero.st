@@ -1,7 +1,7 @@
 as yet unclassified
 crearTablero
 
-    | cellSize gridWidth gridHeight offsetX offsetY botonCerrar botonReiniciar|
+    | cellSize gridWidth gridHeight offsetX offsetY botonCerrar botonReiniciar |
 
     "Tamaño real de cada celda"
     cellSize := 25.
@@ -18,6 +18,26 @@ crearTablero
     "Cálculo correcto del centrado"
     offsetX := (self width - gridWidth) / 2.
     offsetY := (self height - gridHeight) - 60.
+	"Puntaje"
+	
+	puntajePantalla  := TextMorph new.
+	puntajePantalla  contents: 'Puntos: ', (puntos Puntaje) asString.
+	puntajePantalla  position: offsetX @ (offsetY - 30).
+	puntajePantalla  color: Color black.
+	self addMorph: puntajePantalla .
+
+	"vida"
+	vidaPantalla  := TextMorph new.
+	vidaPantalla  contents: 'Vidas: ', (vidas cantidad)asString.
+	vidaPantalla  position: (offsetX + 75) @ (offsetY - 30).
+	vidaPantalla  color: Color black.
+	self addMorph: vidaPantalla .
+	
+	banderasPantalla  := TextMorph new.
+	banderasPantalla contents: 'Banderas disponibles: ', (bombasTotales - contadorBanderas ) asString.
+	banderasPantalla  position: (offsetX + 125)  @ (offsetY - 30).
+	banderasPantalla  color: Color black.
+	self addMorph: banderasPantalla .
 
 	"=== Botón Cerrar ==="
 	botonCerrar := SimpleButtonMorph new.
@@ -26,7 +46,7 @@ crearTablero
    extent: 100 @ 40;
    position: (self width / 2 - 120) @ (offsetY + gridHeight + 10);
    target: self;
-   actionSelector: #activarCierrePorClick.
+   actionSelector: #cerrarBuscaminas.
 	self addMorph: botonCerrar.
 
 	"=== Botón Reiniciar ==="
@@ -58,4 +78,4 @@ crearTablero
         ].
     ].
 
-    self colocarBombas.
+    self colocarBombasyVidas.

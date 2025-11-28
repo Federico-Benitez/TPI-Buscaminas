@@ -2,9 +2,12 @@ as yet unclassified
 perder
 	gameState := false.
 
-	"Mostrar mensaje de derrota"
-	UIManager default inform: '💥 ¡Perdiste! Puntaje final: ',puntos Puntaje printString,' 
-Hacé clic en cualquier parte del tablero para cerrar.'.
+	[
+		UIManager default 
+			alert: ('¡Perdiste! Puntaje final: ', puntos Puntaje printString,
+			' Has click en Reiniciar para intentarlo de nuevo ;)')
+			title: 'Derrota'
+	] forkAt: Processor userBackgroundPriority.
 
 	"Revelar todas las minas"
 	1 to: cellsPerSide do: [:i |
@@ -17,7 +20,3 @@ Hacé clic en cualquier parte del tablero para cerrar.'.
 			].
 		].
 	].
-
-	"Esperar un clic para cerrar"
-	self activarCierrePorClick.
-

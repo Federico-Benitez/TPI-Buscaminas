@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"isOn",
-		"bandera"
+		"bandera",
+		"tieneVida"
 	],
 	"name" : "Celda",
 	"type" : "normal"
